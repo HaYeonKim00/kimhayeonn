@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Blog Post</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Link to external stylesheet -->
+</head>
+<body>
+    <div class="container">
+        <a class="back-button" href="../index.html">
+            <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            Back to Home
+        </a>
+    <div class="container">
+        <h1 class="post-title">LLM and social/political biases</h1>
+        <p class="post-date">2024.03.25</p>
+        <p class="post-topic">LLM</p>
+        <div class="post-content">
+            <p>Main difference between the previous papers and this paper is that it emphasized the connection between pre trained data, LM, and downstream tasks and that it measured the unfairness using widely used standard tests in terms of political biases. And this paper has been cited 54 times since it was published.
+
+
+				If we looked at the previous works there are mainly two types of papers:
+				•	First is paper that test and prove social biases in LMs. For example, In On Second Thought paper by Shaikh in 2022, it performs a controlled evaluation of zero-shot CoT across sensitive domains like harmful questions and stereotype benchmarks. And in Community LM paper by Jian in 2022, it fine tunes LMs with twits of political figures and show how LMs and downstream tasks can be politically leaning. 
+				•	Second type that we see the where it focuses on controlling the pre trained data and propose a way to mitigate the bias problem by controlling the pre trained datasets
+				
+				Just like I mentioned previously, we see the differences in our paper where it links the data, LM, and downstream tasks regarding social biases and measures this with a widely used standard test. And one other big difference is that
+				
+				
+				
+				The two ways suggested to mitigate the problem in this paper.
+				The two ways are combining the LMs with different political leaning and utilizing the fact the LMs are more sensitive to hate speech/ misinformation that differs their own
+				
+				And I found a paper the cited this paper, written by the same author which is not quite talking about social bias and how to mitigate that but how LM should not hallucinate on things that they do not know but have an option to abstain on the question. And the method Feng introduces is quite similar to the solutions he proposed in this paper so I though it was interesting to look into. 
+				
+				
+				He uses Cooperate and Compete Method which is both related to LM collaboration
+					Cooperate method is using one extra LM that judges whether we should output the answer. And there’s self mode and other’s mode where the same LM judges the reject/ accept output and other’s mode is using a different LM to be the judge
+					Compete method is comparing answers of the LM with other answers coming from different LMs. With all the outputs and comparing with them it counts if majority of the answer matched the answer and outputs after checking that.
+				
+				If there’s no easy way to provide answers without social bias or any hallucinations, abstaining should be implemented so that there’s no harm coming from the false outputs or highly stereotypical answers. 
+				</p>
+        </div>
+        <img class="post-image" src="image-placeholder.jpg" alt="Image Placeholder">
+    </div>
+</body>
+</html>
