@@ -16,29 +16,38 @@
         <p class="post-date">2024.03.25</p>
         <p class="post-topic">LLM</p>
         <div class="post-content">
-            <p>Main difference between the previous papers and this paper is that it emphasized the connection between pre trained data, LM, and downstream tasks and that it measured the unfairness using widely used standard tests in terms of political biases. And this paper has been cited 54 times since it was published.
-
-
-				If we looked at the previous works there are mainly two types of papers:
-				•	First is paper that test and prove social biases in LMs. For example, In On Second Thought paper by Shaikh in 2022, it performs a controlled evaluation of zero-shot CoT across sensitive domains like harmful questions and stereotype benchmarks. And in Community LM paper by Jian in 2022, it fine tunes LMs with twits of political figures and show how LMs and downstream tasks can be politically leaning. 
-				•	Second type that we see the where it focuses on controlling the pre trained data and propose a way to mitigate the bias problem by controlling the pre trained datasets
-				
-				Just like I mentioned previously, we see the differences in our paper where it links the data, LM, and downstream tasks regarding social biases and measures this with a widely used standard test. And one other big difference is that
-				
-				
-				
-				The two ways suggested to mitigate the problem in this paper.
-				The two ways are combining the LMs with different political leaning and utilizing the fact the LMs are more sensitive to hate speech/ misinformation that differs their own
-				
-				And I found a paper the cited this paper, written by the same author which is not quite talking about social bias and how to mitigate that but how LM should not hallucinate on things that they do not know but have an option to abstain on the question. And the method Feng introduces is quite similar to the solutions he proposed in this paper so I though it was interesting to look into. 
-				
-				
-				He uses Cooperate and Compete Method which is both related to LM collaboration
-					Cooperate method is using one extra LM that judges whether we should output the answer. And there’s self mode and other’s mode where the same LM judges the reject/ accept output and other’s mode is using a different LM to be the judge
-					Compete method is comparing answers of the LM with other answers coming from different LMs. With all the outputs and comparing with them it counts if majority of the answer matched the answer and outputs after checking that.
-				
-				If there’s no easy way to provide answers without social bias or any hallucinations, abstaining should be implemented so that there’s no harm coming from the false outputs or highly stereotypical answers. 
-				</p>
+            <p>
+				This was a part of my assignment for LLM foundations and ethics class in Columbia University(Spring 2024). <br>
+	
+				We were assigned to read paper called “From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair NLP models”. This paper is impactful in that it goes through the entire pipeline of pretraining data, LMs, and downstream tasks while previous papers focused on one part rather than the whole. Another notable point is that they measured the political bias using widely used standard test. 
+				This paper was cited 54 times since it got published (from litmap). <br>
+				Previous works branching out of this paper can be categorized into two. First category is paper like On Second Thought, Let's Not Think Step by Step! Bias and Toxicity in Zero-Shot Reasoning (Shaikh, 2022) and Community LM: Probing Partisan Worldviews from Language Models (Jiang, 2022). These paper test and prove that LMs can have social/political biases. Second category is paper like Upstream Mitigation Is Not All You Need: Testing the Bias Transfer Hypothesis in Pre-Trained Language Models (Steed, 2022) where they stress the importance of pretrained data and that it must be modified and probed to minimize hate speech/ misinformation problem of LMs. 
+				For subsequent paper, I looked into a paper titled Don’t Hallucinate, Abstain: Identifying LLM Knowledge Gaps via Multi-LLM Collaboration (Feng, 2024) which was written by the same author. I thought this paper was interesting in that they use the solution that was introduced at the end of the paper to mitigate the bias problem in LM. <br>
+				At the end of this paper, it proposed two solutions to mitigate the problem which are <br>
+				<ol>
+					<li> Use a combination of pretrained LMs with different political leaning </li>
+					<li> Utilizing the fact that LMs are more sensitive to hate speech/ misinformation that differs their own, use a scenario specific LM </li>
+				</ol>
+				<br>
+				And in this later paper written by Feng in 2024 comes up with two specific methods to give LLMs an option to abstain to the downstream tasks and they are cooperated and compete method
+				<ol>
+					<li>Cooperate</li>
+					<ol>
+						<li> Uses two LLMs; one that outputs an answer and another that judges if the answer should be abstained or not. </li>
+						<li> Self mode (same LM), Others mode (different LM) </li>
+					</ol>
+					<li>Compete</li>
+					<ol>
+						<li> Uses multiple LLMs; one that outputs an answer and others to compare answers and see if it matches. </li>
+						<li> If majority of them don’t match, abstained.</li>
+					</ol>
+				</ol>
+				<br>
+				I thought this paper was interesting in that if there’s no way to make LMs free of bias, we at least need to have LMs an option to abstain on downstream tasks that can spread misinformation to the users. <br>
+			
+				So far, I think there’s no way of LLM to be better than human being. All human beings have biases and all LMs do too.
+			
+			</p>
         </div>
         <img class="post-image" src="image-placeholder.jpg" alt="Image Placeholder">
     </div>
