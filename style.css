@@ -1,7 +1,15 @@
+* {
+	font-family: "Bitter", serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
+    background-color: white;
 }
 
 .back-button {
@@ -11,7 +19,7 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #007bff;
+    color: black;
     cursor: pointer;
 }
 
@@ -34,12 +42,12 @@ body {
 }
 .post-date {
 	font-style: italic;
-	color: #666;
+	color: #8559A5;
 	margin-bottom: 10px;
 }
 .post-topic {
 	font-weight: bold;
-	color: #007bff;
+	color: #8559A5;
 	margin-bottom: 10px;
 }
 .post-content {

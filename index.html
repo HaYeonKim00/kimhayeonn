@@ -3,16 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Blog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style-index.css">
 </head>
 <body>
-    <div class="container">
+    <div class="main_container">
         <h1>Kimhayeonn's Blog</h1>
-            <li> <a href="blog/LLM_1.html" target="_blank">Example Document</a> </li>
-            <li> <a href="blog/LLM_2.html" target="_blank">Example Document</a> </li>
-        <div id="post-list"></div>
+        <h3>Blog</h3>
+        <ul class="menu">
+            <h5>LLM</h5>
+            <li><h6><a href="blog/LLM_1.html" target="_blank">LLM and social/political biases</a></h6></li>
+            <!-- <li><a href="blog/LLM_1.html" target="_blank">LLM and social/political biases</a></li>
+            <li><a href="blog/LLM_1.html" target="_blank">LLM and social/political biases</a></li> -->
+        </ul>
+        <h3>Photo</h3>
+        <ul class="menu">
+            <li><h5><a href="photo/london.html" target="_blank">London</a></h5></li>
+            <!-- <li><a href="blog/other_2.html" target="_blank">Other post 2</a></li>
+            <li><a href="blog/other_3.html" target="_blank">Other post 3</a></li> -->
+        </ul>
+        <h3>Video</h3>
+        <ul class="menu">
+            <li><h5><a href="https://www.youtube.com/@hayeonkim4999/videos" target="_blank">Youtube</a></h5></li>
+        </ul>
     </div>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var headings = document.querySelectorAll('.main_container h3');
+    
+            headings.forEach(function(heading) {
+                heading.addEventListener('click', function() {
+                    var list = this.nextElementSibling;
+                    list.classList.toggle('collapsed');
+                });
+            });
+        });
+    </script> 
 </body>
 </html>
