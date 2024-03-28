@@ -9,7 +9,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: #f0eeedc8;
 }
 
 .back-button {
@@ -19,7 +19,7 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: #609EA2;
     cursor: pointer;
 }
 
@@ -42,16 +42,17 @@ body {
 }
 .post-date {
 	font-style: italic;
-	color: #8559A5;
+	color: #913175;
 	margin-bottom: 10px;
 }
 .post-topic {
 	font-weight: bold;
-	color: #8559A5;
+	color: #913175;
 	margin-bottom: 10px;
 }
 .post-content {
 	margin-bottom: 20px;
+    color: #332C39;
 }
 .post-image {
 	max-width: 100%;

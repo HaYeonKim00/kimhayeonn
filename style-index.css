@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-	background-color: #A1DD70;
+	background-color: #f0eeedc8;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -29,7 +29,7 @@ body {
 }
 
 .main_container h1 {
-	color: #8559A5;
+	color: #913175;
 	font-size: 40px;
 }
 
@@ -39,14 +39,14 @@ body {
 
 .main_container h3 {
     cursor: pointer;
-    color: #8559A5;
+    color: #332C39;
 	font-size: 20px;
 	margin-bottom: 0px;
 }
 
 .main_container h5 {
     cursor: pointer;
-    color: #8559A5;
+    color: #332C39;
 	font-size: 15px;
 	margin-bottom: 5px;
 	margin-left: 15px;
@@ -55,9 +55,22 @@ body {
 
 .main_container h6 {
     cursor: pointer;
-    color: #8559A5;
+    color: #609EA2;
 	font-size: 15px;
 	margin-left: 30px;
 	margin-top: 0px;
 	margin-bottom: 5px;
+}
+
+.main_container h7 {
+    cursor: pointer;
+    color: #609EA2;
+	font-size: 15px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+.custom-link {
+    color: #609EA2; /* Change 'red' to the color you prefer */
 }
